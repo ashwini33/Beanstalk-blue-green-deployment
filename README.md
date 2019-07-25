@@ -16,7 +16,8 @@ Benefits of Blue/Green Deployment
 
 </ul>
 AWS has tools and services to make zero downtime deployments :-
+<ul>
+<li> AWS Elastic Beanstalk, a platform as a service (PaaS) that supports most popular development platforms and languages. If your application doesn’t require a very customized platform environment to operate, this is a great, easy to use service. It also offers zero downtime deployments.
 
-AWS Elastic Beanstalk, a platform as a service (PaaS) that supports most popular development platforms and languages. If your application doesn’t require a very customized platform environment to operate, this is a great, easy to use service. It also offers zero downtime deployments.
-
-If your application has a more complex multi-tier architecture, AWS OpsWorks allows you to model complex decoupled applications. It trades in some of the ease of use of Elastic Beanstalk for increased flexibility. A great feature that makes blue/green deployment easy is the ability to clone a stack and create a copy of your blue stack as a baseline for your green one. Learn how to get started using OpsWorks.
+<li> If your application has a more complex multi-tier architecture, AWS OpsWorks allows you to model complex decoupled applications. It trades in some of the ease of use of Elastic Beanstalk for increased flexibility. A great feature that makes blue/green deployment easy is the ability to clone a stack and create a copy of your blue stack as a baseline for your green one. Learn how to get started using OpsWorks.
+</ul>
