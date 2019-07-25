@@ -8,12 +8,13 @@ Blue/green deployment on the AWS platform provides a safer, less stressful way t
 
 Once we bring the green environment up, we can validate the new software before going live. Then, we start shifting traffic away from the blue environment and send it to the green one. Normally, we do that using weighted DNS resolution because it gives us an easy way to push more traffic to the green environment or revert traffic back to the blue environment in case of issues.
 Benefits of Blue/Green Deployment
+<ul>
+    <li> If the validation tests of the green environment fail before you start sending real traffic, then we can dispose of the environment without ever having affected the live blue production environment.
+   <li> If we start switching a small proportion of traffic from blue to green and encounter serious issues, then we can quickly switch back to blue and restore service within minutes. This process is sometimes called canary analysis: you test that the new deployment works in a real-world scenario with a small set of your users.
+    <li> We can easily take advantage of newer, more powerful, or cheaper servers by simply launching the newer server types in your green environment, validating them, and then cutting over.
+    <li> We can also take advantage of Auto Scaling to optimize costs. You can allow the size of the fleet of servers in your green environment to grow gradually as you shift more traffic to it, while the size of the blue fleet will shrink as it handles less traffic.
 
-    If the validation tests of the green environment fail before you start sending real traffic, then we can dispose of the environment without ever having affected the live blue production environment.
-    If we start switching a small proportion of traffic from blue to green and encounter serious issues, then we can quickly switch back to blue and restore service within minutes. This process is sometimes called canary analysis: you test that the new deployment works in a real-world scenario with a small set of your users.
-    We can easily take advantage of newer, more powerful, or cheaper servers by simply launching the newer server types in your green environment, validating them, and then cutting over.
-    We can also take advantage of Auto Scaling to optimize costs. You can allow the size of the fleet of servers in your green environment to grow gradually as you shift more traffic to it, while the size of the blue fleet will shrink as it handles less traffic.
-
+</ul>
 AWS has tools and services to make zero downtime deployments :-
 
 AWS Elastic Beanstalk, a platform as a service (PaaS) that supports most popular development platforms and languages. If your application doesn’t require a very customized platform environment to operate, this is a great, easy to use service. It also offers zero downtime deployments.
